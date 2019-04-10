@@ -65,8 +65,9 @@ $(document).ready(function(){
     var depositAmount = parseInt($("input#deposit").val());
     var withdrawalAmount = parseInt($("input#withdrawal").val());
     var targetAccount = bank.findAccount(nameSearch);
-    console.log(targetAccount);
     targetAccount.deposit(depositAmount);
-    console.log(bank.findAccount("mustafa"));
+    console.log(bank.findAccount(nameSearch));
+    targetAccount.withdraw(withdrawalAmount);
+    console.log(bank.findAccount(nameSearch));
   });
 });
